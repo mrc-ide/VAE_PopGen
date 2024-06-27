@@ -11,7 +11,7 @@ pip install "jax[cpu]"
 conda install conda-forge::numpyro
 conda install conda-forge::arviz
 conda install hydra-core
-pip install git+ssh://git@github.com/MLGlobalHealth/dge.git
+pip install git+ssh://git@github.com/MLGlobalHealth/dsp.git
 pip install git+ssh://git@github.com/MLGlobalHealth/sps.git
 ```
 
@@ -22,7 +22,7 @@ conda create --name popgen python=3.12
 conda activate popgen
 pip install --upgrade "jax[cuda12]"
 pip install 'numpyro[cuda]' -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
-pip install git+ssh://git@github.com/MLGlobalHealth/dge.git
+pip install git+ssh://git@github.com/MLGlobalHealth/dsp.git
 pip install git+ssh://git@github.com/MLGlobalHealth/sps.git
 conda install conda-forge::arviz
 conda install hydra-core
