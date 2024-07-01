@@ -16,7 +16,7 @@ source("src/functions.R")
 demes_x <- 32
 demes_y <- 32
 N <- 1e3
-mu <- 1e-7
+mu <- 1e-5
 m <- 5*1e-3
 t_out <- seq(0, 5e4, l = 6)
 
@@ -41,7 +41,7 @@ df_mean %>%
 plot_lattice_mat(sim1)
 
 
-n_sims <- 100000
+n_sims <- 10000
 
 for (i in 1:n_sims){
   print(i)
@@ -68,9 +68,11 @@ for (i in 1:n_sims){
   } else {
     df <- rbind(df, df_sim)
   }
+  if(i %% 1000 == 0) {
+	fname <- paste0("/home/scratch/popgen/samples/samps_N",  N, "_mu", mu, "_m", m, ".csv")
+	write.csv(df, fname, row.names=FALSE)
+  }
 }
 
-fname <- paste0("/home/scratch/popgen/samples/samps_N",  N, "_mu", mu, "_m", m, ".csv")
-write.csv(df, fname, row.names=FALSE)
 
 
