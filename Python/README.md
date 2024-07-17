@@ -9,10 +9,11 @@ conda create --name popgen python=3.12
 conda activate popgen
 pip install "jax[cpu]"
 conda install conda-forge::numpyro
-conda install conda-forge::arviz
-conda install hydra-core
 pip install git+ssh://git@github.com/MLGlobalHealth/dsp.git
 pip install git+ssh://git@github.com/MLGlobalHealth/sps.git
+conda install conda-forge::arviz
+conda install hydra-core
+conda install jupyter
 ```
 
 If working on a machine with GPU, the lines installing `jax` and `numpyro` need to be replaced. The full set of commands is as follows: 
@@ -26,6 +27,7 @@ pip install git+ssh://git@github.com/MLGlobalHealth/dsp.git
 pip install git+ssh://git@github.com/MLGlobalHealth/sps.git
 conda install conda-forge::arviz
 conda install hydra-core
+conda install jupyter
 ```
 
 To test installations, type in terminal `python` and then `import numpyro`, `import jax`, `import sps`, `import dge`. Make sure none of these commands ends in an error.
